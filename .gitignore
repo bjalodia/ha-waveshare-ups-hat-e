@@ -1,0 +1,7 @@
+# Only the integration, README and HACS metadata are published
+/*
+!/custom_components
+!/README.md
+!/hacs.json
+!/.gitignore
+__pycache__/

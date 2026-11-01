@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Waveshare UPS HAT (E)",
+        "description": "Connect to the UPS HAT using the Raspberry Pi I²C bus.",
+        "data": {
+          "i2c_bus": "I²C bus number"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not read the device. Check I²C is enabled and accessible, and verify the bus number.",
+      "not_ups_hat": "The device at I²C address 0x2D is not a Waveshare UPS HAT (E)."
+    },
+    "abort": {
+      "already_configured": "This UPS HAT is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Power protection",
+        "description": "Shut down the host when the battery runs low on battery power. Only fresh readings are used, so an unavailable UPS never triggers a shutdown.",
+        "data": {
+          "shutdown_enabled": "Shut down the host automatically",
+          "critical_percent": "Critical battery level (while discharging)",
+          "critical_delay_seconds": "Time below critical level before shutdown",
+          "emergency_percent": "Emergency battery level (no external power)",
+          "emergency_delay_seconds": "Time below emergency level before shutdown",
+          "notify_on_battery": "Notify when the UPS switches to battery"
+        }
+      }
+    }
+  }
+}
